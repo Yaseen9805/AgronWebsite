@@ -3,6 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Agron - a vertically integrated organic farm bringing fresh, healthy produce from field to table."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2024%2024'%3E%3Ctext%20y%3D'19'%20font-size%3D'20'%3E%F0%9F%8C%BF%3C%2Ftext%3E%3C%2Fsvg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -12,45 +26,73 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css"
     />
     <link rel="stylesheet" href="agron.css" />
+    <script src="agron.js" defer></script>
 
-    <title>agron</title>
+    <title>Agron Website</title>
   </head>
 
   <body>
-    <div class="main-content">
-      <div class="mobile-menu-toggle" id="mobileMenuToggle">
-        <i class="fa-solid fa-bars"></i>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-content">
+        <div class="loading-logo">
+          <img
+            src="https://agron.casethemes.net/wp-content/uploads/2025/05/logo.png"
+            alt="Agron"
+          />
+        </div>
+        <div class="loading-spinner">
+          <i class="fa-solid fa-leaf spinner-leaf" aria-hidden="true"></i>
+          <p class="loading-text">Loading fresh produce...</p>
+        </div>
       </div>
+    </div>
+    <noscript>
+      <style>
+        .loading-overlay { display: none !important; }
+      </style>
+    </noscript>
+    <div class="main-content">
+      <button
+        type="button"
+        class="mobile-menu-toggle"
+        id="mobileMenuToggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
 
       <div id="home" class="topnav" >
         <div class="lefticons">
           <span>
-            <i id="icons" class="fa-solid fa-leaf"></i>Natural organicfarm
+            <i class="icon-item fa-solid fa-leaf" aria-hidden="true"></i>Natural Organic Farm
           </span>
           <div class="header-item"></div>
           <span>
-            <i id="icons" class="fa-solid fa-location-dot"></i> San Francisco
+            <i class="icon-item fa-solid fa-location-dot" aria-hidden="true"></i> San Francisco
           </span>
           <div class="header-item"></div>
           <span>
-            <i id="icons" class="fa-solid fa-envelope"></i> info@agron.com
+            <i class="icon-item fa-solid fa-envelope" aria-hidden="true"></i> info@agron.com
           </span>
           <div class="header-item"></div>
           <span>
-            <i id="icons" class="fa-solid fa-phone"></i> (704) 555-0127
+            <i class="icon-item fa-solid fa-phone" aria-hidden="true"></i> (704) 555-0127
           </span>
           <div class="header-item"></div>
           <span>
-            <i id="icons" class="fa-solid fa-clock"></i> Mon - Sat: 9am - 6pm
+            <i class="icon-item fa-solid fa-clock" aria-hidden="true"></i> Mon - Sat: 9am - 6pm
           </span>
         </div>
         <div class="righticons">
-          <span class="fi fi-gb"></span> EN
+          <span class="fi fi-gb" aria-hidden="true"></span> EN
           <div class="header-item"></div>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-x-twitter"></i>
-          <i class="fa-brands fa-dribbble"></i>
-          <i class="fa-brands fa-instagram"></i>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
       <div class="header-hero">
@@ -59,48 +101,36 @@
             <span class="img">
               <img
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/logo.png"
-                alt=""
+                alt="Agron"
               />
             </span>
           </div>
 
           <div class="center-section">
             <div class="navbar mobile-menu" id="mobileMenu">
-              <nav>
+              <nav aria-label="Primary">
                 <ul>
-                  <a href="#home">
-                      <li>Home</li>
-                  </a>
-                  <a href="#about">
-                      <li>About</li>
-                  </a>
-                  <a href="#services">
-                      <li>Services</li>
-                  </a>
-                  <a href="#projects">
-                      <li>Projects</li>
-                </a>
-                  <a href="#blog">
-                      <li>Blog</li>
-                  </a>
-                  <a href="#contact">
-                      <li>Contact</li>
-                  </a>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#products">Products</a></li>
+                  <li><a href="#blog">Blog</a></li>
+                  <li><a href="#contact">Contact</a></li>
                 </ul>
               </nav>
             </div>
           </div>
 
           <div class="right-section">
-            <div class="search-bar">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+            <button type="button" class="search-bar" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
 
-            <button class="lettalk">Let's Talk</button>
+            <button type="button" class="lettalk" data-scroll-to="#contact">Let's Talk</button>
           </div>
         </div>
 
-        <div class="hero">
+        <div class="hero" id="main-content" tabindex="-1">
           <div class="hero-text">
             <h1>Healthy Life<br />With Fresh<br />Products</h1>
             <p>
@@ -108,8 +138,8 @@
             </p>
             <hr />
             <div class="hero-buttons">
-              <button class="view-products">View Our Products</button>
-              <button class="our-services">Our Services</button>
+              <button type="button" class="view-products" data-scroll-to="#products">View Our Products</button>
+              <button type="button" class="our-services" data-scroll-to="#services">Our Services</button>
             </div>
           </div>
 
@@ -120,7 +150,7 @@
             <img
               src="https://agron.casethemes.net/wp-content/uploads/2025/06/farmer-3.png"
               width="600px"
-              alt=""
+              alt="Farmer holding a crate of fresh organic produce"
             />
             <div class="clouds-container">
               <img
@@ -168,62 +198,74 @@
           <div class="scroll-wrapper">
             <div class="scroll-images">
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-1.svg"
                 height="120px"
                 alt=""
               />
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-2.svg"
                 height="120px"
                 alt=""
               />
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-3.svg"
                 height="120px"
                 alt=""
               />
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-4.svg"
                 height="120px"
                 alt=""
               />
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-5.svg"
                 height="120px"
                 alt=""
               />
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-6.svg"
                 height="120px"
                 alt=""
               />
 
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-1.svg"
                 height="120px"
                 alt=""
               />
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-2.svg"
                 height="120px"
                 alt=""
               />
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-3.svg"
                 height="120px"
                 alt=""
               />
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-4.svg"
                 height="120px"
                 alt=""
               />
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-5.svg"
                 height="120px"
                 alt=""
               />
               <img
+                loading="lazy" decoding="async"
                 src="https://agron.casethemes.net/wp-content/uploads/2025/05/partner-6.svg"
                 height="120px"
                 alt=""
@@ -235,8 +277,9 @@
       <div id="about" class="thirdsection">
         <div class="farmer">
           <img
+            loading="lazy" decoding="async"
             src="https://agron.casethemes.net/wp-content/uploads/2025/05/farmer.png"
-            alt=""
+            alt="Organic farmer tending to crops"
           />
         </div>
         <div class="farmer-text">
@@ -299,6 +342,7 @@
           <div class="service-card">
             <div class="card-image">
               <img
+                loading="lazy" decoding="async"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl8r4BkNFPLvLonrp_nj_kjN98OKuklT2aYg16MFmf2AVn7EHxpHE2q-l6q4CufF-C1TFm&s"
                 alt="Farm Produce"
               />
@@ -317,6 +361,7 @@
           <div class="service-card">
             <div class="card-image">
               <img
+                loading="lazy" decoding="async"
                 src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSDjYTCFTZxaXNxnRNenL7F9Pu9a2FzsBKt6jEoVXx_IwVx_JFMw3gszd5B7K1QgzmtnJTS7L7E_g_duJFu-DkJul5FwBCYsR-Y0R0lcaav"
                 alt="Agriculture Tomato"
               />
@@ -335,6 +380,7 @@
           <div class="service-card">
             <div class="card-image">
               <img
+                loading="lazy" decoding="async"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI-0qJHn_bpmVl9YHFjtdvdoBPXciHfqFg7g&s"
                 alt="Natural Carrots"
               />
@@ -353,6 +399,7 @@
           <div class="service-card">
             <div class="card-image">
               <img
+                loading="lazy" decoding="async"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC56UE6dp7KNAhLf5ovbpJ274ealiMni_dVA&s"
                 alt="Agriculture Fruits"
               />
@@ -372,10 +419,12 @@
       <div class="wheat-container">
         <div class="wheat">
           <img
+            loading="lazy" decoding="async"
             src="https://agron.casethemes.net/wp-content/uploads/2025/06/rice-flower.png"
             alt="Wheat"
           />
           <img
+            loading="lazy" decoding="async"
             src="https://agron.casethemes.net/wp-content/uploads/2025/06/rice-flower.png"
             alt="Wheat"
           />
@@ -385,11 +434,12 @@
         <div class="left-side">
           <div class="image-wrapper">
             <img
+              loading="lazy" decoding="async"
               src="https://agron.casethemes.net/wp-content/uploads/2025/06/image-26.webp"
               alt="Organic Farmer"
             />
             <div class="natural-badge">
-              <img src="https://i.imgur.com/3bGvG8R.png" alt="Natural 100%" />
+              <img src="https://i.imgur.com/3bGvG8R.png" alt="Natural 100%" loading="lazy" decoding="async" />
             </div>
             <div class="award-badge">
               <i class="fa-solid fa-award"></i>
@@ -431,7 +481,7 @@
             </div>
           </div>
 
-          <button class="contact-btn">Contact Us</button>
+          <button type="button" class="contact-btn" data-scroll-to="#contact">Contact Us</button>
         </div>
       </div>
       <section class="stats-section">
@@ -459,7 +509,7 @@
         </div>
       </section>
  
-<section class="products-section">
+<section id="products" class="products-section">
   <div class="section-header-1">
     <div class="extradiv">
       <span class="subtitle">
@@ -476,48 +526,48 @@
 
     <div class="product-card">
       <div class="badge sale">Sale</div>
-      <div class="badge discount">12%</div>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQLeqdYK4nYy90kz1371mhuuzwSEDa-WzTe-UlAuJujX0Zyfcnn1kUpLpxvCp2knoSwlQ0zQ&s" alt="Natural Carrots" />
+      <div class="badge discount">13%</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQLeqdYK4nYy90kz1371mhuuzwSEDa-WzTe-UlAuJujX0Zyfcnn1kUpLpxvCp2knoSwlQ0zQ&s" alt="Natural Carrots" loading="lazy" decoding="async" />
       <h3>Natural Carrots</h3>
       <p class="price">
-        <span class="new-price">$344.00</span>
-        <span class="old-price">$389.00</span>
+        <span class="new-price">$3.49</span>
+        <span class="old-price">$3.99</span>
       </p>
     </div>
 
 
     <div class="product-card">
       <div class="badge sale">Sale</div>
-      <div class="badge discount">12%</div>
-      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSacb0vu2OhUzJk2hr3k_kr-xu1BUQVu6GiLpXzpgjSLlMBIF8Hk9SXrBw37q5KdT6BjnS1NAbyjzcsqdnil25A13ICdoPtN-NVQBRpfs6Y" alt="Organic Sweet Corn" />
+      <div class="badge discount">14%</div>
+      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSacb0vu2OhUzJk2hr3k_kr-xu1BUQVu6GiLpXzpgjSLlMBIF8Hk9SXrBw37q5KdT6BjnS1NAbyjzcsqdnil25A13ICdoPtN-NVQBRpfs6Y" alt="Organic Sweet Corn" loading="lazy" decoding="async" />
       <h3>Organic Sweet Corn</h3>
       <p class="price">
-        <span class="new-price">$344.00</span>
-        <span class="old-price">$389.00</span>
+        <span class="new-price">$2.99</span>
+        <span class="old-price">$3.49</span>
       </p>
     </div>
 
 
     <div class="product-card">
       <div class="badge sale">Sale</div>
-      <div class="badge discount">12%</div>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQLeqdYK4nYy90kz1371mhuuzwSEDa-WzTe-UlAuJujX0Zyfcnn1kUpLpxvCp2knoSwlQ0zQ&s" alt="Organic Carrot" />
-      <h3>Organic Carrot</h3>
+      <div class="badge discount">13%</div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Bright_red_tomato_and_cross_section02.jpg/500px-Bright_red_tomato_and_cross_section02.jpg" alt="Fresh Tomatoes" loading="lazy" decoding="async" />
+      <h3>Fresh Tomatoes</h3>
       <p class="price">
-        <span class="new-price">$344.00</span>
-        <span class="old-price">$389.00</span>
+        <span class="new-price">$3.29</span>
+        <span class="old-price">$3.79</span>
       </p>
     </div>
 
 
     <div class="product-card">
       <div class="badge sale">Sale</div>
-      <div class="badge discount">12%</div>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQLeqdYK4nYy90kz1371mhuuzwSEDa-WzTe-UlAuJujX0Zyfcnn1kUpLpxvCp2knoSwlQ0zQ&s" alt="Organic Carrot Zin" />
-      <h3>Organic Carrot Zin</h3>
+      <div class="badge discount">15%</div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Broccoli_and_cross_section_edit.jpg/500px-Broccoli_and_cross_section_edit.jpg" alt="Organic Broccoli" loading="lazy" decoding="async" />
+      <h3>Organic Broccoli</h3>
       <p class="price">
-        <span class="new-price">$344.00</span>
-        <span class="old-price">$389.00</span>
+        <span class="new-price">$4.49</span>
+        <span class="old-price">$5.29</span>
       </p>
     </div>
   </div>
@@ -540,24 +590,28 @@
         <div class="gallery-row">
           <div class="gallery-item">
             <img
+              loading="lazy" decoding="async"
               src="https://img.freepik.com/premium-photo/happy-indian-farmer-green-cotton-field_54391-2204.jpg"
               alt="Farming Tractor"
             />
           </div>
           <div class="gallery-item">
             <img
+              loading="lazy" decoding="async"
               src="https://thumbs.dreamstime.com/b/1930s-farmer-smiling-29345865.jpg"
               alt="Fresh Vegetables"
             />
           </div>
           <div class="gallery-item">
             <img
+              loading="lazy" decoding="async"
               src="https://thumbs.dreamstime.com/b/malagasy-farmers-plowing-agricultural-field-traditional-way-where-plow-attached-to-bulls-madagascar-49048455.jpg"
               alt="Farmers Market"
             />
           </div>
           <div class="gallery-item">
             <img
+              loading="lazy" decoding="async"
               src="https://images.stockcake.com/public/5/6/c/56c6126b-1df4-4df4-af67-5b39f0162c5c_large/happy-farmer-smiling-stockcake.jpg"
               alt="Farmer Carrying Basket"
             />
@@ -577,35 +631,44 @@
             support a cleaner.
           </p>
           <div class="farmers-arrows">
-            <button class="arrow-btn"><i class="fas fa-arrow-left"></i></button>
-            <button class="arrow-btn">
-              <i class="fas fa-arrow-right"></i>
+            <button type="button" class="arrow-btn" id="farmersPrev" aria-label="Previous farmer"><i class="fas fa-arrow-left" aria-hidden="true"></i></button>
+            <button type="button" class="arrow-btn" id="farmersNext" aria-label="Next farmer">
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </button>
           </div>
         </div>
 
-        <div class="farmers-cards">
+        <div class="farmers-cards" id="farmersCards">
           <div class="farmer-card">
-            <img
-              src="https://us.images.westend61.de/0001748603pw/portrait-of-beautiful-female-gardener-carrying-crate-with-freshly-harvested-vegetables-in-farm-young-female-farmer-working-in-field-JLPSF20048.jpg"
-              alt="Chloe Morgan"
-            />
+            <div class="farmer-card-media">
+              <img
+                loading="lazy" decoding="async"
+                src="https://us.images.westend61.de/0001748603pw/portrait-of-beautiful-female-gardener-carrying-crate-with-freshly-harvested-vegetables-in-farm-young-female-farmer-working-in-field-JLPSF20048.jpg"
+                alt="Chloe Morgan"
+              />
+            </div>
             <h4>Formal Farmer</h4>
             <h3>Chloe Morgan</h3>
           </div>
           <div class="farmer-card">
-            <img
-              src="https://thumbs.dreamstime.com/b/smiling-professional-female-farmer-plantation-portrait-cheerful-young-attractive-woman-posing-farm-field-320382628.jpg"
-              alt="Olivia Bennett"
-            />
+            <div class="farmer-card-media">
+              <img
+                loading="lazy" decoding="async"
+                src="https://thumbs.dreamstime.com/b/smiling-professional-female-farmer-plantation-portrait-cheerful-young-attractive-woman-posing-farm-field-320382628.jpg"
+                alt="Olivia Bennett"
+              />
+            </div>
             <h4>Formal Farmer</h4>
             <h3>Olivia Bennett</h3>
           </div>
           <div class="farmer-card">
-            <img
-              src="https://static.vecteezy.com/system/resources/previews/029/772/501/non_2x/portrait-of-female-farmer-using-tablet-in-the-farm-observes-and-check-growth-plants-agriculture-smart-farming-concept-photo.jpeg"
-              alt="Jessica Brown"
-            />
+            <div class="farmer-card-media">
+              <img
+                loading="lazy" decoding="async"
+                src="https://static.vecteezy.com/system/resources/previews/029/772/501/non_2x/portrait-of-female-farmer-using-tablet-in-the-farm-observes-and-check-growth-plants-agriculture-smart-farming-concept-photo.jpeg"
+                alt="Jessica Brown"
+              />
+            </div>
             <h4>Formal Farmer</h4>
             <h3>Jessica Brown</h3>
           </div>
@@ -628,6 +691,7 @@
           <div class="product-card">
             <span class="discount">-23%</span>
             <img
+              loading="lazy" decoding="async"
               src="https://imgs.search.brave.com/yYJwryjAI9IW7KjagYXpjvxD1Sw-2OBYImUWZkPdLq0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMS8w/Mi8xMy8wOC8yMi9l/Z2dzLTYwMTA3MTZf/NjQwLmpwZw"
               alt="Organic Eggs"
             />
@@ -638,7 +702,7 @@
                 <span class="new-price">$32.99</span>
                 <span class="old-price">$42.99</span>
               </p>
-              <button class="add-to-cart">
+              <button type="button" class="add-to-cart">
                 Add to Cart <i class="fas fa-shopping-basket"></i>
               </button>
             </div>
@@ -646,6 +710,7 @@
 
           <div class="product-card">
             <img
+              loading="lazy" decoding="async"
               src="https://imgs.search.brave.com/pUag2StcF2rwey2A4LcyxnpHWFAxdYOuGOqUvyFtP1o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ3/MzAwNzcyL3Bob3Rv/L3BpbGUtb2YtZnJl/c2gtY3VjdW1iZXJz/LXdpdGgtb25lLWN1/dC1vcGVuLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1FaUpJ/YmVMeXd0ZmZ5QVlG/UXNMODZEUDZpZGhT/R2VlbW9PVmltX2pF/ZkJRPQ"
               alt="Organic Cucumbers"
             />
@@ -656,7 +721,7 @@
                 <span class="new-price">$32.99</span>
                 <span class="old-price">$42.99</span>
               </p>
-              <button class="add-to-cart">
+              <button type="button" class="add-to-cart">
                 Add to Cart <i class="fas fa-shopping-basket"></i>
               </button>
             </div>
@@ -664,6 +729,7 @@
 
           <div class="product-card">
             <img
+              loading="lazy" decoding="async"
               src="https://imgs.search.brave.com/rk9o7fIKRag3j8PcTVLHHp-eNRcxivLTZyngkTiY5Nk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjcv/Njc5LzE4MC9zbWFs/bC9haS1nZW5lcmF0/ZWQtY2xvc2UtdXAt/c2hvdC1vZi1jb2xv/cmVkLWJlbGwtcGVw/cGVycy13aXRoLWRy/b3BzLW9mLXdhdGVy/LWZyZWUtcGhvdG8u/anBn"
               alt="Organic Bell Peppers"
             />
@@ -674,7 +740,7 @@
                 <span class="new-price">$32.99</span>
                 <span class="old-price">$42.99</span>
               </p>
-              <button class="add-to-cart">
+              <button type="button" class="add-to-cart">
                 Add to Cart <i class="fas fa-shopping-basket"></i>
               </button>
             </div>
@@ -683,6 +749,7 @@
           <div class="product-card">
             <div class="img">
               <img
+                loading="lazy" decoding="async"
                 src="https://imgs.search.brave.com/6xR0Clquqi2xnSDW_COe_WpkCo_FrhFdNBhxOmnuGaQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMw/Mjk5OTQyOS9waG90/by90aHJlZS1hcHBs/ZXMuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPWd2UTNLUnA1/Y2stb0EyOWtjeUN6/TWpUSmlKek1MVEhJ/T3pQOG9BQlhrNGs9"
                 alt="Organic Apples"
               />
@@ -694,7 +761,7 @@
                 <span class="new-price">$32.99</span>
                 <span class="old-price">$42.99</span>
               </p>
-              <button class="add-to-cart">
+              <button type="button" class="add-to-cart">
                 Add to Cart <i class="fas fa-shopping-basket"></i>
               </button>
             </div>
@@ -702,19 +769,13 @@
         </div>
       </section>
       <section class="discount-offer">
-
-          <div class="offer-content">
-            <span class="offer-label"
-            ><i class="offer-icon">⚙</i></span>
-            <h2>
-              <p>
-                Discount Offer 
-              </p>
-              Don't Miss Out -<br />
-              Enjoy Up to 50% Off!
-            </h2>
-          </div>
-            <a href="#" class="offer-btn">Discover More <i>↗</i></a>
+        <div class="offer-content">
+          <span class="offer-label">
+            <i class="fa-solid fa-tags offer-icon" aria-hidden="true"></i> Discount Offer
+          </span>
+          <h2>Don't Miss Out &mdash;<br />Enjoy Up to 50% Off!</h2>
+        </div>
+        <a href="#" class="offer-btn">Discover More <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
       </section>
       <section class="testimonials">
         <div class="section-header">
@@ -733,7 +794,7 @@
               are great to work with and are excellent trainers. Thank you all!”
             </p>
             <div class="testimonial-footer">
-              <img src="https://www.shutterstock.com/image-photo/portrait-beautiful-female-african-farmer-600nw-2114744657.jpg" alt="Charlotte Wilson" />
+              <img src="https://www.shutterstock.com/image-photo/portrait-beautiful-female-african-farmer-600nw-2114744657.jpg" alt="Charlotte Wilson" loading="lazy" decoding="async" />
               <div>
                 <span class="role">Formal Farmer</span>
                 <h4>Charlotte Wilson</h4>
@@ -749,7 +810,7 @@
               are great to work with and are excellent trainers. Thank you all!”
             </p>
             <div class="testimonial-footer">
-              <img src="https://us.images.westend61.de/0000926315pw/portrait-of-confident-female-farmer-holding-beautiful-flowers-on-field-CAVF47425.jpg" alt="Emilio J. Harper" />
+              <img src="https://us.images.westend61.de/0000926315pw/portrait-of-confident-female-farmer-holding-beautiful-flowers-on-field-CAVF47425.jpg" alt="Emilio J. Harper" loading="lazy" decoding="async" />
               <div>
                 <span class="role">Formal Farmer</span>
                 <h4>Emilio J. Harper</h4>
@@ -765,7 +826,7 @@
               are great to work with and are excellent trainers. Thank you all!”
             </p>
             <div class="testimonial-footer">
-              <img src="https://previews.123rf.com/images/venusvi/venusvi1703/venusvi170300003/74700388-a-beautiful-portrait-of-a-girl-farmer-and-farmers-are-working-in-outdoors.jpg" alt="Amelia Davis" />
+              <img src="https://previews.123rf.com/images/venusvi/venusvi1703/venusvi170300003/74700388-a-beautiful-portrait-of-a-girl-farmer-and-farmers-are-working-in-outdoors.jpg" alt="Amelia Davis" loading="lazy" decoding="async" />
               <div>
                 <span class="role">Formal Farmer</span>
                 <h4>Amelia Davis</h4>
@@ -794,6 +855,7 @@
               <small>June</small>
             </div>
             <img
+              loading="lazy" decoding="async"
               src="https://thumbs.dreamstime.com/b/sea-barren-fields-lone-farmer-clings-to-lifeless-plant-symbol-drought-has-plagued-his-crops-spirit-vector-374874300.jpg"
               alt="Sustainable Farming"
             />
@@ -804,10 +866,13 @@
           </div>
 
           <div class="blog-card">
-            <img
-              src="https://static.vecteezy.com/system/resources/previews/047/147/398/non_2x/the-rolling-hills-of-a-countryside-farm-are-dotted-with-s-of-solar-panels-providing-renewable-energy-for-the-vibrant-fields-below-illustration-vector.jpg"
-              alt="Rice Harvest"
-            />
+            <div class="blog-card-media">
+              <img
+                loading="lazy" decoding="async"
+                src="https://static.vecteezy.com/system/resources/previews/047/147/398/non_2x/the-rolling-hills-of-a-countryside-farm-are-dotted-with-s-of-solar-panels-providing-renewable-energy-for-the-vibrant-fields-below-illustration-vector.jpg"
+                alt="Rice Harvest"
+              />
+            </div>
             <div class="blog-card-content">
               <span class="blog-meta">Agricultural • 24 June, 2025</span>
               <h4>Farmer prepares fresh rice bundles for harvest</h4>
@@ -820,10 +885,13 @@
           </div>
 
           <div class="blog-card">
-            <img
-              src="https://scx2.b-cdn.net/gfx/news/hires/2024/new-research-from-swan.jpg"
-              alt="Farm Sentiment"
-            />
+            <div class="blog-card-media">
+              <img
+                loading="lazy" decoding="async"
+                src="https://scx2.b-cdn.net/gfx/news/hires/2024/new-research-from-swan.jpg"
+                alt="Farm Sentiment"
+              />
+            </div>
             <div class="blog-card-content">
               <span class="blog-meta">Agricultural • 24 June, 2025</span>
               <h4>The Farmers Sentiment Darkens Hopes Fade</h4>
@@ -845,16 +913,23 @@
               and Natural Products
             </h2>
 
-            <form action="#">
+            <form id="contactForm" novalidate>
               <div class="form-row">
-                <input type="email" placeholder="Enter email" required />
-                <input type="text" placeholder="Enter name" required />
+                <label class="visually-hidden" for="contactEmail">Email</label>
+                <input id="contactEmail" name="email" type="email" placeholder="Enter email" autocomplete="email" required />
+                <label class="visually-hidden" for="contactName">Name</label>
+                <input id="contactName" name="name" type="text" placeholder="Enter name" autocomplete="name" required />
               </div>
               <div class="form-row">
-                <input type="text" placeholder="Your name" required />
-                <input type="tel" placeholder="Phone number" required />
+                <label class="visually-hidden" for="contactSubject">Subject</label>
+                <input id="contactSubject" name="subject" type="text" placeholder="Subject" required />
+                <label class="visually-hidden" for="contactPhone">Phone number</label>
+                <input id="contactPhone" name="phone" type="tel" placeholder="Phone number" autocomplete="tel" required />
               </div>
+              <label class="visually-hidden" for="contactMessage">Message</label>
               <textarea
+                id="contactMessage"
+                name="message"
                 placeholder="Write a message..."
                 rows="5"
                 required
@@ -862,11 +937,13 @@
               <button type="submit" class="btn-submit">
                 Send Your Message ↗
               </button>
+              <p class="form-feedback" id="contactFeedback" role="status" aria-live="polite"></p>
             </form>
           </div>
 
           <div class="contact-image">
             <img
+              loading="lazy" decoding="async"
               src="https://agron.casethemes.net/wp-content/uploads/2025/05/farmer-2.png"
               alt="Farmer"
             />
@@ -877,6 +954,7 @@
         <div class="footer-top">
           <div class="footer-item">
             <img
+              loading="lazy" decoding="async"
               src="https://agron.casethemes.net/wp-content/uploads/2025/05/logo.png"
               alt="AGRON Logo"
               class="footer-logo"
@@ -892,34 +970,34 @@
               clean water, and grow crops that are safe, natural.
             </p>
             <div class="socials">
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-              <a href="#"><i class="fa-brands fa-dribbble"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
           </div>
 
           <div class="widget links">
             <h4>Useful Link</h4>
             <ul>
-              <li>About Company</li>
-              <li>Meet Member</li>
-              <li>Contact Us</li>
-              <li>24/7 Support</li>
-              <li>Our FAQs</li>
-              <li>Pricing Plan</li>
+              <li><a href="#">About Company</a></li>
+              <li><a href="#">Meet Member</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#">24/7 Support</a></li>
+              <li><a href="#">Our FAQs</a></li>
+              <li><a href="#">Pricing Plan</a></li>
             </ul>
           </div>
 
           <div class="widget services">
             <h4>Our Services</h4>
             <ul>
-              <li>Agriculture Foods</li>
-              <li>Organic Vegetables</li>
-              <li>Pond & Sea Fish</li>
-              <li>Cow Milk & Meat</li>
-              <li>Modern Equipment</li>
-              <li>Eggs & Meat</li>
+              <li><a href="#services">Agriculture Foods</a></li>
+              <li><a href="#services">Organic Vegetables</a></li>
+              <li><a href="#services">Pond & Sea Fish</a></li>
+              <li><a href="#services">Cow Milk & Meat</a></li>
+              <li><a href="#services">Modern Equipment</a></li>
+              <li><a href="#services">Eggs & Meat</a></li>
             </ul>
           </div>
 
@@ -927,6 +1005,7 @@
             <h4>Our News</h4>
             <div class="news-item">
               <img
+                loading="lazy" decoding="async"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa9BksM0EleBgYxzN33jIH7vONZgJpDFTtxgwedWWgnziCxwLMqHtHMQ&s"
                 alt=""
               />
@@ -937,6 +1016,7 @@
             </div>
             <div class="news-item">
               <img
+                loading="lazy" decoding="async"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa9BksM0EleBgYxzN33jIH7vONZgJpDFTtxgwedWWgnziCxwLMqHtHMQ&s"
                 alt=""
               />
@@ -950,24 +1030,30 @@
 
         <div class="newsletter">
           <h4>Subscribe Our Newsletter To Get More Updates</h4>
-          <form>
-            <input type="email" placeholder="Your email" />
-            <input type="text" placeholder="Your name" />
+          <form id="newsletterForm" novalidate>
+            <label class="visually-hidden" for="newsletterEmail">Your email</label>
+            <input id="newsletterEmail" name="email" type="email" placeholder="Your email" autocomplete="email" required />
+            <label class="visually-hidden" for="newsletterName">Your name</label>
+            <input id="newsletterName" name="name" type="text" placeholder="Your name" autocomplete="name" required />
             <button type="submit">Subscribe ↗</button>
           </form>
+          <p class="form-feedback" id="newsletterFeedback" role="status" aria-live="polite"></p>
         </div>
 
         <div class="footer-bottom">
           <p>© 2025 Agron. All Rights Reserved</p>
           <div class="payments">
-            <img src="visa.png" alt="" />
-            <img src="mastercard.png" alt="" />
-            <img src="amex.png" alt="" />
-            <img src="paypal.png" alt="" />
+            <i class="fa-brands fa-cc-visa" aria-label="Visa"></i>
+            <i class="fa-brands fa-cc-mastercard" aria-label="Mastercard"></i>
+            <i class="fa-brands fa-cc-amex" aria-label="American Express"></i>
+            <i class="fa-brands fa-cc-paypal" aria-label="PayPal"></i>
           </div>
         </div>
       </footer>
     </div>
     <div class="buy-on-envato">Buy on <a href="#">envato</a></div>
+    <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
   </body>
 </html>
